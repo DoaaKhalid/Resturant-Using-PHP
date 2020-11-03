@@ -3,17 +3,17 @@
 $name=$email=$subject=$message='';
 
  //Form Information
-   isset($_GET['yourName'])?$name = $_GET['yourName']:$name='';
-   isset($_GET['yourEmail'])?$email= $_GET['yourEmail']:$email='';
-   isset($_GET['yourSubject'])?$subject= $_GET['yourSubject']:$subject='';
-   isset($_GET['yourMessage'])?$message= $_GET['yourMessage']:$message='';
+   isset($_POST['yourName'])?$name = $_POST['yourName']:$name='';
+   isset($_POST['yourEmail'])?$email= $_POST['yourEmail']:$email='';
+   isset($_POST['yourSubject'])?$subject= $_POST['yourSubject']:$subject='';
+   isset($_POST['yourMessage'])?$message= $_POST['yourMessage']:$message='';
 
 
    // Validation Errors
 $nameError=$emailError=$subjectError=$messageError='';
 require ('validation.php');
 
-if(isset($_GET['sub'])) {
+if(isset($_POST['sub'])) {
     $valid=new validation();
 //Check Name Validation
     $valid->ValidateType($name, validation::REQUIRED);
@@ -37,7 +37,7 @@ if(isset($_GET['sub'])) {
     //If all Information is validate Insert it in Database
 if($valid->valid)
 {
-    $_GET=array();
+    $_POST=array();
     require('Database.php');
         $db=new Database();
     $db->Query("INSERT INTO `contactpage`( `name`, `email`, `subject`, `message`) VALUES (:name,:email,:subject,:message)");
