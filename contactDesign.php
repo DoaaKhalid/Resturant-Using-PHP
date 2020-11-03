@@ -48,7 +48,7 @@
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
 						<h2 class="h4 mb-2 mb-md-5 font-weight-bold">Contact Us</h2>
-						<form action="#" method="get" href="#">
+						<form action="#" method="post" href="#">
               <div class="form-group">
                   <?php include 'contact.php';?>
                 <input type="text" class="form-control"  value="<?php echo htmlspecialchars($_GET['yourName'] ?? '', ENT_QUOTES); ?>" placeholder="Your Name" name="yourName">
