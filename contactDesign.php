@@ -48,19 +48,19 @@
 				<div class="row d-flex align-items-stretch no-gutters">
 					<div class="col-md-6 pt-5 px-2 pb-2 p-md-5 order-md-last">
 						<h2 class="h4 mb-2 mb-md-5 font-weight-bold">Contact Us</h2>
-						<form action="#" method="post" href="#">
+						<form action="#" method="get" href="#">
               <div class="form-group">
                   <?php include 'contact.php';?>
-                <input type="text" class="form-control"  value="<?php echo htmlspecialchars($_GET['yourName'] ?? '', ENT_QUOTES); ?>" placeholder="Your Name" name="yourName">
+                <input type="text" class="form-control"  value="<?php echo htmlspecialchars($_POST['yourName'] ?? '', ENT_QUOTES); ?>" placeholder="Your Name" name="yourName">
                   <span style="color: red"> <?php echo ($nameError); ?></span>
 
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Your Email"  value="<?php echo htmlspecialchars($_GET['yourEmail'] ?? '', ENT_QUOTES); ?>" name="yourEmail">
+                <input type="text" class="form-control" placeholder="Your Email"  value="<?php echo htmlspecialchars($_POST['yourEmail'] ?? '', ENT_QUOTES); ?>" name="yourEmail">
                   <span style="color: red"> <?php echo $emailError; ?></span>
               </div>
               <div class="form-group">
-                <input type="text" class="form-control" placeholder="Subject"  value="<?php echo htmlspecialchars($_GET['yourSubject'] ?? '', ENT_QUOTES); ?>" name="yourSubject">
+                <input type="text" class="form-control" placeholder="Subject"  value="<?php echo htmlspecialchars($_POST['yourSubject'] ?? '', ENT_QUOTES); ?>" name="yourSubject">
                   <span style="color: #ff0000"> <?php echo $subjectError; ?></span>
               </div>
               <div class="form-group">
