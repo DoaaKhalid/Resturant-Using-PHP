@@ -51,23 +51,23 @@ include('menuBack.php');
     <div class="container">
         <div class="row mb-5" style="background-color: #e5900a">
             <div class="col-md-6 col-lg-3">
-                <div class="ftco-footer-widget mb-4">
+                <div class="ftco-footer-widPOST mb-4">
                     <h2 class="ftco-heading-2">Meal Name</h2>
 
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="ftco-footer-widget mb-4">
+                <div class="ftco-footer-widPOST mb-4">
                     <h3 class="ftco-heading-2">Number Of Meals</h3>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="ftco-footer-widget mb-4">
+                <div class="ftco-footer-widPOST mb-4">
                     <h3 class="ftco-heading-2">Price</h3>
                 </div>
             </div>
             <div class="col-md-6 col-lg-3">
-                <div class="ftco-footer-widget mb-4">
+                <div class="ftco-footer-widPOST mb-4">
                     <?php
                     $totalPrice=0;
                     $db = new Database();
@@ -97,18 +97,18 @@ include('menuBack.php');
         <div class="container">
             <div class="row mb-5">
                 <div class="col-md-6 col-lg-3">
-                    <div class="ftco-footer-widget mb-4">
+                    <div class="ftco-footer-widPOST mb-4">
                         <h2 style="color: #ffdf7e" class="ftco-heading-2"><?php echo "$P->name ";?></h2>
 
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="ftco-footer-widget mb-4">
+                    <div class="ftco-footer-widPOST mb-4">
                         <h2 style="color: #ffdf7e" class="ftco-heading-2"><?php echo " $P->number";?></h2>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
-                    <div class="ftco-footer-widget mb-4">
+                    <div class="ftco-footer-widPOST mb-4">
                         <h2 style="color: #ffdf7e" class="ftco-heading-2"><?php echo " $P->price"."$";?></h2>
                     </div>
                 </div>
