@@ -7,7 +7,7 @@ $totalPrice=0;
 require ('validation.php');
 require('Database.php');
 
-if(isset($_GET['order'])) {
+if(isset($_POST['order'])) {
     $db = new Database();
     $db->IsConnected();
     $Meals = [];
@@ -16,7 +16,7 @@ if(isset($_GET['order'])) {
         $db->Execute();
         $Meals = $db->resultset();
         foreach ($Meals as $meal):
-            foreach ($_GET as $query_string_variable => $value) :{
+            foreach ($_POST as $query_string_variable => $value) :{
                 if (strpos($query_string_variable, $meal->name) === 0 && $value !='0' && $value != 'Order ') {
 
                     $valid = new validation();
@@ -49,7 +49,7 @@ if($AllValid==true)
     $db1->Execute();
 
     foreach ($Meals as $meal):
-            foreach($_GET as $query_string_variable => $value) :{
+            foreach($_POST as $query_string_variable => $value) :{
                 if(strpos($query_string_variable, $meal->name)===0 && $value>0){
                             $price = $order->orderMeal($meal->name,(double)$value );
                             $totalPrice+=$price;
