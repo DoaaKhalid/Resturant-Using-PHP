@@ -66,7 +66,7 @@
 
 <?php include('menuBack.php'); ?>
 <?php include ('header.php')?>
-<form action="" method="get" id="frm">
+<form action="" method="post" id="frm">
     <section class="ftco-section">
         <div class="container">
             <div class="ftco-search">
