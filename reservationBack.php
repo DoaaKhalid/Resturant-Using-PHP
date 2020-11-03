@@ -3,20 +3,20 @@
 $name=$email=$phone=$time=$date=$person='';
 
 //Form Information
-isset($_GET['yourName'])?$name = $_GET['yourName']:$name='';
-isset($_GET['yourEmail'])?$email= $_GET['yourEmail']:$email='';
+isset($_POST['yourName'])?$name = $_POST['yourName']:$name='';
+isset($_POST['yourEmail'])?$email= $_POST['yourEmail']:$email='';
 
-isset($_GET['yourPhone'])?$phone = $_GET['yourPhone']:$phone='';
-isset($_GET['Date'])?$date= $_GET['Date']:$date='';
-isset($_GET['Time'])?$time = $_GET['Time']:$time='';
-isset($_GET['Persons'])?$person= $_GET['Persons']:$person='';
+isset($_POST['yourPhone'])?$phone = $_POST['yourPhone']:$phone='';
+isset($_POST['Date'])?$date= $_POST['Date']:$date='';
+isset($_POST['Time'])?$time = $_POST['Time']:$time='';
+isset($_POST['Persons'])?$person= $_POST['Persons']:$person='';
 
 
 // Validation Errors
 $nameError=$emailError=$subjectError=$messageError=$phoneError=$dateError=$timeError=$personError='';
 require ('validation.php');
 
-if(isset($_GET['reservation'])) {
+if(isset($_POST['reservation'])) {
 
         $valid = new validation();
 
@@ -56,7 +56,7 @@ if(isset($_GET['reservation'])) {
     //If all Information is validate Insert it in Database
   if($valid->valid)
     {
-        if(isset($_GET['reservation'])) {
+        if(isset($_POST['reservation'])) {
 
             require('Database.php');
             $db=new Database();
@@ -92,7 +92,7 @@ if(isset($_GET['reservation'])) {
                 endforeach;
 
         }
-        $_GET=array();
+        $_POST=array();
 
 
     }
