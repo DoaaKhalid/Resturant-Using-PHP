@@ -91,7 +91,7 @@
 		          	<span class="subheading">Book a table</span>
 		            <h2 class="mb-4">Make Reservation</h2>
 		          </div>
-	            <form action="#" method="get">
+	            <form action="#" method="post">
                     <?php include "reservationBack.php";?>
 	              <div class="row">
 	                <div class="col-md-6">
